@@ -1,0 +1,10 @@
+<view class="hr"></view>
+<view class="container">
+  <view class="flex-item city">大兴安岭
+    <icon class="icon-small" type="download" size="15"></icon>
+  </view>
+  <view class="flex-item search">
+    <icon class="icon-small" type="download" size="15"></icon>搜索感兴趣的活动</view>
+  <view class="flex-item activity">免费发活动</view>
+</view>
+<view class="hr"></view>

@@ -1,5 +1,9 @@
 //app.js
 App({
+  globalData: {
+    windowHeight: null,
+    rate:null  //各屏幕比例
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -32,8 +36,11 @@ App({
         }
       }
     })
-  },
-  globalData: {
-    userInfo: null
+    let self = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        self.globalData.rate =  (750 / res.windowWidth)
+      }
+    })
   }
 })

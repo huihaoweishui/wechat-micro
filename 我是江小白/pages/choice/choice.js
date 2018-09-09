@@ -90,11 +90,12 @@ Page({
     thirdLineTopMargin:'1rpx'
   },
   onLoad: function() {
+    
     let self = this;
     wx.getSystemInfo({
       success: function(res) {
         self.setData({
-          scrollHeight: res.windowHeight*app.globalData.rate-250 + "rpx", //如果头部没有固定住，在这里调整 180
+          scrollHeight: res.windowHeight*app.globalData.rate-190 + "rpx", //如果头部没有固定住，在这里调整 有待完善
           firstLineBottomMargin: app.globalData.rate*12+"rpx",
           secondLineTopMargin: app.globalData.rate * 15 + "rpx",
           thirdLineTopMargin: app.globalData.rate * 12 + "rpx",

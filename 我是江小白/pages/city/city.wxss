@@ -1,0 +1,16 @@
+.titleText {
+  background-color: grey;
+  font-size: 30rpx;
+}
+
+.initial {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.initialItem {
+  width: 24%;
+  text-align: center;
+  border-right:thin solid blue;
+  border-bottom:thin solid blue;
+}

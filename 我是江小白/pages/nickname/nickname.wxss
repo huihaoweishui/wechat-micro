@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  padding-top: 20rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.input {
+  background-color: white;
+  padding: 20rpx;
+}
+
+.btnView {
+  background-color: white;
+  padding: 20rpx;
+  padding-bottom: 40rpx;
+}
+
+.completeBtn {
+  width: 90%;
+  background-color: #009ae8;
+}

@@ -1,0 +1,8 @@
+<view class="container">
+  <view class='input'>
+    <input placeholder="修改昵称" maxlength="24"></input>
+  </view>
+  <view class='btnView'>
+    <button class='completeBtn'>完成</button>
+  </view>
+</view>

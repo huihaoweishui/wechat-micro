@@ -2,6 +2,7 @@
 App({
   globalData: {
     windowHeight: null,
+    windowWidth: null,
     rate:null  //各屏幕比例
   },
   onLaunch: function () {
@@ -39,6 +40,7 @@ App({
     let self = this;
     wx.getSystemInfo({
       success: function (res) {
+        self.globalData.windowWidth = res.windowWidth;
         self.globalData.rate =  (750 / res.windowWidth)
       }
     })

@@ -1,14 +1,26 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-  频道
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class='page'>
+  <view class='headerLine' style='margin-bottom:{{firstLineBottomMargin}}'></view>
+  <view class='header'>
+    <view class='city item'>
+      <text>大兴安岭</text>
+      <view class='hd'></view>
+    </view>
+    <view class='search item'>
+      <image class="img searchImg" src="/image/glass.png"></image>
+      <text class="searchText">搜索感兴趣的活动</text>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='headerEndLine' style='margin-top: {{secondLineTopMargin}};'></view>
+  <view class='module'>
+    <block wx:for="{{moduleList}}" wx:key="{{item.id}}">
+        <view class='moduleItem'>
+          <view class='moduleImg'>
+            <image class='contentImg' mode='scaleToFill' src='{{item.imgSrc}}'></image>
+          </view>
+          <view class='moduleName'>
+            <text>{{item.name}}</text>
+          </view>
+        </view>
+    </block>
   </view>
 </view>

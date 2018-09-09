@@ -1,0 +1,6 @@
+ <view class='orderView'>
+    <view class='noOrderView'>
+      <image class='noOrder' src='/image/plus.png'></image>
+    </view>
+    <view class='noOrderText'>没有收藏记录</view>
+  </view>

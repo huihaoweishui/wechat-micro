@@ -1,10 +1,15 @@
 {
   "pages": [
+    "pages/city/city",
     "pages/choice/choice",
+    "pages/profile/profile",
+    "pages/nickname/nickname",
+    "pages/me/me",
+    "pages/channel/channel",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/channel/channel",
-    "pages/me/me"
+    "pages/collection/collection",
+    "pages/focus/focus"
   ],
   "window": {
     "backgroundTextStyle": "light",

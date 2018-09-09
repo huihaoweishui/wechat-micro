@@ -1,0 +1,71 @@
+<!-- navigator.wxml -->
+<view class='container'>
+  <view class='parent' bindtap='actioncnt'>
+    <view class='name'>
+      <text>头像</text>
+    </view>
+    <view>
+      <image mode='scaleToFill' class='img' src='/image/location.png'></image>
+    </view>
+    <view>
+      <view class='hd'></view>
+    </view>
+  </view>
+  <view class='line' style='height:{{lineHeight}}'></view>
+   <navigator url="/pages/nickname/nickname">
+  <view class='parent'>
+    <view class='name'>
+      <text>昵称
+    </text>
+    </view>
+    <view>
+      <text class='right'>薛晨</text>
+    </view>
+    <view>
+      <view class='hd'></view>
+    </view>
+  </view>
+</navigator>
+  <view class='line' style='height:{{lineHeight}}'></view>
+  <picker mode="selector" range='{{sexData}}' bindchange="bindSexChange">
+    <view class='parent'>
+      <view class='name'>
+        <text>性别</text>
+      </view>
+      <view>
+        <text class='right'> {{sex}}</text>
+      </view>
+      <view>
+        <view class='hd'></view>
+      </view>
+    </view>
+  </picker>
+  <view class='line' style='height:{{lineHeight}}'></view>
+  <picker mode="date" start="1900-1-1" end="2100-1-1" value="{{date}}" fields="day" bindchange="bindDateChange">
+    <view class='parent'>
+      <view class='name'>
+        <text>出生日期</text>
+      </view>
+      <view>
+        <text class='right'>{{date}}</text>
+      </view>
+
+      <view>
+        <view class='hd'></view>
+      </view>
+    </view>
+  </picker>
+  <view class='line' style='height:{{lineHeight}}'></view>
+
+  <view class='parent'>
+    <view class='name'>
+      <text>地区</text>
+    </view>
+    <view>
+      <text class='right'>无锡</text>
+    </view>
+    <view>
+      <view class='hd'></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+ <view class='orderView'>
+    <view class='noOrderView'>
+      <image class='noOrder' src='/image/plus.png'></image>
+    </view>
+    <view class='noOrderText'>没有关注过主办方哦</view>
+  </view>

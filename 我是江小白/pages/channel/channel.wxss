@@ -1,21 +1,124 @@
-/**index.wxss**/
-.userinfo {
+.page {
+  font-size: 11pt;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  overflow: hidden;
+}
+
+.headerLine {
+  width: 100%;
+  height: 2rpx;
+  background-color: #eee;
+}
+
+.scrollItemHr {
+  width: 100%;
+  height: 2rpx;
+  background-color: #eee;
+  margin-top: 17rpx;
+}
+
+.headerEndLine {
+  width: 100%;
+  height: 2rpx;
+  background-color: #eee;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.city {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-left: 18rpx;
+}
+
+.hd {
+  height: 13rpx;
+  width: 13rpx;
+  border-width: 3rpx 3rpx 0 0;
+  border-style: solid;
+  transform: rotate(135deg);
+  margin-left: 10rpx;
+  align-self: center;
+}
+
+.hd:hover {
+  transform: rotate(-45deg);
+}
+
+.hd2 {
+  height: 13rpx;
+  width: 13rpx;
+  border-width: 3rpx 3rpx 0 0;
+  border-style: solid;
+  transform: rotate(135deg);
+  margin-left: 10rpx;
+  align-self: center;
+  margin-top: 10rpx;
+}
+
+.hd2:hover {
+  transform: rotate(-45deg);
+}
+
+.img {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.search {
+  background-color: #e6e6e6;
+  border-radius: 12rpx;
+  font-weight: 100;
+  color: grey;
+  flex-grow: 2;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+}
+
+.searchImg {
+  vertical-align: middle;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  margin-bottom: 5rpx;
+}
+
+/*module*/
+
+.module {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.moduleImg {
+  width: 33%;
+  height: 100rpx;
+}
+
+.contentImg {
+  width: 100%;
+  height: 100%;
+}
+
+.moduleItem {
+  width: 33%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 20rpx;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.moduleName{
+  margin-top: 20rpx;
 }

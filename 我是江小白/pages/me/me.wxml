@@ -1,18 +1,49 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="page-body">
-    <view class="page-section">
-      <view class="page-section-title">
-        <text>flex-direction: row\n横向布局</text>
+  <view class='headerLine' style='margin-bottom:{{firstLineBottomMargin}}'></view>
+  <navigator url="/pages/profile/profile?title=navigate" hover-class="navigator-hover">
+    <view class='header'>
+      <view class='imgView'>
+        <image mode='scaleToFill' class='img' src='/image/location.png'></image>
       </view>
-      <view class="page-section-spacing">
-        <view class="flex-wrp" style="flex-direction:row;">
-          <view class="flex-item demo-text-1"></view>
-          <view class="flex-item demo-text-2"></view>
-          <view class="flex-item demo-text-3"></view>
+      <view class='name'>
+        <text>薛晨</text>
+      </view>
+      <view class='hd'></view>
+    </view>
+  </navigator>
+  <view class='line1'></view>
+  <view class='middle'>
+
+    <view class='collection item'>
+      <navigator url="/pages/collection/collection">
+        <view>
+          <text>0</text>
         </view>
-      </view>
+        <view>
+          <text>收藏</text>
+        </view>
+      </navigator>
     </view>
 
+    <view class='seprate'></view>
+
+    <view class='focus item'>
+      <navigator url="/pages/focus/focus">
+        <view>
+          <text>0</text>
+        </view>
+        <view>
+          <text>关注</text>
+        </view>
+      </navigator>
+    </view>
+
+  </view>
+  <view class='orderView'>
+    <view class='noOrderView'>
+      <image class='noOrder' src='/image/plus.png'></image>
+    </view>
+    <view class='noOrderText'>你还没有订单</view>
   </view>
 </view>

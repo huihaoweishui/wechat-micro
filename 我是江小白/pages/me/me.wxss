@@ -1,14 +1,92 @@
-.flex-wrp{
-  margin-top: 60rpx;
-  display:flex;
+.container {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 }
-.flex-item{
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.name {
+  margin-left: 20rpx;
+  margin-right: auto;
+}
+
+.hd {
+  height: 13rpx;
+  width: 13rpx;
+  border-width: 3rpx 3rpx 0 0;
+  border-style: solid;
+  transform: rotate(45deg);
+  margin-right: 50rpx;
+}
+
+.img {
+  width: 120rpx;
+  height: 120rpx;
+  border: 1 solid #f00;
+  border-radius: 100rpx;
+  background-color: #199968;
+  margin-left: 25rpx;
+}
+
+/*收藏和关注*/
+
+.line1 {
+  width: 100%;
+  height: 0.1rpx;
+  background-color: rgb(255, 254, 237);
+  font-weight: 100;
+  margin-top: 50rpx;
+}
+
+.middle {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 20rpx;
+  margin-top: 40rpx;
+}
+
+.item {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.seprate {
+  width: 5rpx;
+  height: 70rpx;
+  background-color: rgb(245, 237, 237);
+  font-weight: 100;
+}
+
+.orderView {
+  width: 100%;
+  height: 100%;
+  background-color: #efeef4;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.noOrder {
   width: 200rpx;
-  height: 300rpx;
-  font-size: 26rpx;
-}
-.flex-item-V{
-  margin: 0 auto;
-  width: 300rpx;
   height: 200rpx;
+  border: 1 solid #f00;
+  border-radius: 100rpx;
+  background-color: #e3e5ea;
+}
+
+.noOrderText {
+  font-size: 25rpx;
+  font-weight: 100;
+  color: grey;
+  margin-top: 30rpx;
+  margin-bottom: 250rpx;
 }

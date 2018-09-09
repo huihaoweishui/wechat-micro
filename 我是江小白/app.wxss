@@ -1,3 +1,7 @@
-body{
-  font-size: x-small
+body {
+  font-size: x-small;
+}
+/*不知道为何在这里要设置 才能在子页面里设置heitht100%*/
+page {
+  height: 100%;
 }

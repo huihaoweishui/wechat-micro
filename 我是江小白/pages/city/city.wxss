@@ -9,8 +9,9 @@
   justify-content: flex-start;
 }
 .initialItem {
-  width: 24%;
+  width: 25%;
+  box-sizing: border-box;
   text-align: center;
-  border-right:thin solid blue;
-  border-bottom:thin solid blue;
+  border-right:thin solid gainsboro;
+  border-bottom:thin solid gainsboro;
 }

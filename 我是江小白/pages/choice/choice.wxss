@@ -111,6 +111,7 @@
 
 .scrollItem:first-child {
   margin-left: 0rpx;
+  color: #0198e9;
 }
 
 ::-webkit-scrollbar {

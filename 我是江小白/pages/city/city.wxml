@@ -11,16 +11,16 @@
       <text>全部城市</text>
     </view>
     <view class='initial'>
-      <text class='initialItem'>A</text>
-      <text class='initialItem'>B</text>
-      <text class='initialItem'>C</text>
-      <text class='initialItem'>D</text>
-      <text class='initialItem'>E</text>
-      <text class='initialItem'>F</text>
-      <text class='initialItem'>G</text>
-      <text class='initialItem'>H</text>
-      <text class='initialItem'>J</text>
-      <text class='initialItem'>K</text>
+    <text class='initialItem'>A</text>
+    <text class='initialItem'>B</text>
+    <text class='initialItem'>C</text>
+    <text class='initialItem'>D</text>
+    <text class='initialItem'>E</text>
+    <text class='initialItem'>F</text>
+    <text class='initialItem'>D</text>
+    <text class='initialItem'>E</text>
+    <text class='initialItem'>F</text>
+
     </view>
   </scroll-view>
 </view>

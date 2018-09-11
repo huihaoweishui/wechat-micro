@@ -1,26 +1,22 @@
-<!-- navigator.wxml -->
-<view class='container'>
-  <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<scroll-view scroll-y="true" style="height: {{windowHeight}};" scroll-with-animation="{{animation}}" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class='titleText'>
+    <text>当前定位城市</text>
+  </view>
+  <view class='position'>
+    <text>正在定位中。。</text>
+  </view>
+  <view class='titleText'>
+    <text>全部城市</text>
+  </view>
+  <view class='initial litter'>
+    <text wx:for="{{initialArray}}" wx:key="{{item}}" class='initialItem' bindtap="anchor" data-initial='{{item}}'>{{item}}   </text>
+  </view>
+  <view wx:for="{{initialAndItsChild}}" wx:key="{{item}}" id="{{item.initial}}">
     <view class='titleText'>
-      <text>当前定位城市</text>
-    </view>
-    <view>
-      <text>正在定位中。。</text>
-    </view>
-    <view class='titleText'>
-      <text>全部城市</text>
+      <text>{{item.initial}}</text>
     </view>
     <view class='initial'>
-    <text class='initialItem'>A</text>
-    <text class='initialItem'>B</text>
-    <text class='initialItem'>C</text>
-    <text class='initialItem'>D</text>
-    <text class='initialItem'>E</text>
-    <text class='initialItem'>F</text>
-    <text class='initialItem'>D</text>
-    <text class='initialItem'>E</text>
-    <text class='initialItem'>F</text>
-
+      <text wx:for="{{item.child}}" wx:for-item="item2" wx:key="{{item2}}" class='initialItem'>{{item2}}</text>
     </view>
-  </scroll-view>
-</view>
+  </view>
+</scroll-view>

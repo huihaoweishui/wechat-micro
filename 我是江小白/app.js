@@ -40,6 +40,7 @@ App({
     let self = this;
     wx.getSystemInfo({
       success: function (res) {
+        self.globalData.windowHeight = res.windowHeight;
         self.globalData.windowWidth = res.windowWidth;
         self.globalData.rate =  (750 / res.windowWidth)
       }

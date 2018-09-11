@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/city/city",
     "pages/choice/choice",
+    "pages/city/city",
     "pages/profile/profile",
     "pages/nickname/nickname",
     "pages/me/me",

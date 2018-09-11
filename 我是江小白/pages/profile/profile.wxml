@@ -12,20 +12,20 @@
     </view>
   </view>
   <view class='line' style='height:{{lineHeight}}'></view>
-   <navigator url="/pages/nickname/nickname">
-  <view class='parent'>
-    <view class='name'>
-      <text>昵称
+  <navigator url="/pages/nickname/nickname">
+    <view class='parent'>
+      <view class='name'>
+        <text>昵称
     </text>
+      </view>
+      <view>
+        <text class='right'>薛晨</text>
+      </view>
+      <view>
+        <view class='hd'></view>
+      </view>
     </view>
-    <view>
-      <text class='right'>薛晨</text>
-    </view>
-    <view>
-      <view class='hd'></view>
-    </view>
-  </view>
-</navigator>
+  </navigator>
   <view class='line' style='height:{{lineHeight}}'></view>
   <picker mode="selector" range='{{sexData}}' bindchange="bindSexChange">
     <view class='parent'>
@@ -56,16 +56,17 @@
     </view>
   </picker>
   <view class='line' style='height:{{lineHeight}}'></view>
-
-  <view class='parent'>
-    <view class='name'>
-      <text>地区</text>
+  <navigator url="/pages/city/city">
+    <view class='parent'>
+      <view class='name'>
+        <text>地区</text>
+      </view>
+      <view>
+        <text class='right'>无锡</text>
+      </view>
+      <view>
+        <view class='hd'></view>
+      </view>
     </view>
-    <view>
-      <text class='right'>无锡</text>
-    </view>
-    <view>
-      <view class='hd'></view>
-    </view>
-  </view>
+  </navigator>
 </view>

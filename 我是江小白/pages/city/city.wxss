@@ -1,6 +1,16 @@
 .titleText {
-  background-color: grey;
+  background-color: #efeef4;
   font-size: 30rpx;
+  font-weight: 100;
+  color: grey;
+  padding: 10rpx;
+  padding-left: 25rpx;
+}
+
+.position {
+  font-size: 30rpx;
+  padding: 10rpx;
+  padding-left: 25rpx;
 }
 
 .initial {
@@ -8,10 +18,14 @@
   flex-flow: row wrap;
   justify-content: flex-start;
 }
+
 .initialItem {
+  font-weight: 300;
+  font-size: 22rpx;
   width: 25%;
   box-sizing: border-box;
   text-align: center;
-  border-right:thin solid gainsboro;
-  border-bottom:thin solid gainsboro;
+  border-right: thin solid gainsboro;
+  border-bottom: thin solid gainsboro;
+  padding: 13rpx;
 }

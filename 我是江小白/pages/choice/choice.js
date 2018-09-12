@@ -1,6 +1,8 @@
 const app = getApp()
 Page({
   data: {
+    transformCategory: '',
+    transformCity: '',
     tabContent: [
       '全部',
       '亲子',
@@ -85,18 +87,18 @@ Page({
     scrollY: true,
     scrollTop: 0,
     scrollHeight: '0rpx;',
-    firstLineBottomMargin:'1rpx;',
-    secondLineTopMargin:'1rpx',
-    thirdLineTopMargin:'1rpx'
+    firstLineBottomMargin: '1rpx;',
+    secondLineTopMargin: '1rpx',
+    thirdLineTopMargin: '1rpx'
   },
   onLoad: function() {
-    
+
     let self = this;
     wx.getSystemInfo({
       success: function(res) {
         self.setData({
-          scrollHeight: res.windowHeight*app.globalData.rate-190 + "rpx", //如果头部没有固定住，在这里调整 有待完善
-          firstLineBottomMargin: app.globalData.rate*12+"rpx",
+          scrollHeight: res.windowHeight * app.globalData.rate - 190 + "rpx", //如果头部没有固定住，在这里调整 有待完善
+          firstLineBottomMargin: app.globalData.rate * 12 + "rpx",
           secondLineTopMargin: app.globalData.rate * 15 + "rpx",
           thirdLineTopMargin: app.globalData.rate * 12 + "rpx",
         })
@@ -129,4 +131,14 @@ Page({
   scroll: function(e) {
 
   },
+  toggleCity: function() {
+    this.setData({
+      transformCity: this.data.transformCity==''?'rotate(-45deg)':''
+    })
+  },
+  toggleCategory: function() {
+    this.setData({
+      transformCategory: this.data.transformCategory == '' ? 'rotate(-45deg)' : ''
+    })
+  }
 })

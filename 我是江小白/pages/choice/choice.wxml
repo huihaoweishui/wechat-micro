@@ -1,6 +1,6 @@
 <view class='page'>
-  <view class='headerLine' style='margin-bottom:{{firstLineBottomMargin}}'></view>
-  <view class='header'>
+  <view class='headerLine search-bar' style='margin-bottom:{{firstLineBottomMargin}}'></view>
+  <view class='header search-bar'>
     <view class='city item' bindtap='toggleCity'>
       <text>大兴安岭</text>
       <view class='hd' style='transform:{{transformCity}}'></view>
@@ -13,17 +13,19 @@
       <text>免费发活动</text>
     </view>
   </view>
-  <view class='headerEndLine' style='margin-top: {{secondLineTopMargin}};'></view>
-  <view class='tab'>
-    <scroll-view class="scrollView" scroll-x="{{scrollX}}">
-      <block wx:for="{{tabContent}}" wx:key="{{item}}">
-        <view class='scrollItem'> {{item}} </view>
+  <view class='headerEndLine search-bar' style='margin-top: {{secondLineTopMargin}};'></view>
+  <view class='tab search-bar'>
+    <scroll-view class="scrollView" scroll-x="{{scrollX}}" scroll-into-view="{{toView}}" scroll-x="true">
+      <block wx:for="{{tabContent}}" wx:key="{{item.id}}">
+        <view id='{{item.id}}' data-chosen='{{item.id}}' class='scrollItem {{chosen==item.id?"chosen":""}}' bindtap='contentItemCLick'> {{item.name}} </view>
       </block>
     </scroll-view>
-    <view class='hd2' style='transform:{{transformCategory}}' bindtap='toggleCategory'>
+    <view class='right' bindtap='toggleCategory'>
+      <view class='hd2' style='margin-left:25rpx;'>
+      </view>
     </view>
   </view>
-  <view class='tabEndLine' style='margin-top: {{thirdLineTopMargin}};margin-bottom: {{thirdLineTopMargin}};'></view>
+  <view class='tabEndLine search-bar' style='margin-top: {{thirdLineTopMargin}};margin-bottom: {{thirdLineTopMargin}};'></view>
   <view class='content'>
     <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="true" scroll-top="{{scrollTop}}">
       <block wx:for="{{content}}" wx:key="{{item.id}}">
@@ -49,13 +51,17 @@
       </block>
     </scroll-view>
   </view>
-  <view class='zhezao'>
+  <!--模拟器有bug preventTouchMove效果在真机上可以的-->
+  <view class='zhezao' hidden='{{hidden}}' catchtouchmove="preventTouchMove">
     <view class='allCategory'>
       <text class='allText'>全部分类</text>
-      <view class='hd2 allHd2' style='transform:{{transformCategory}}' bindtap='toggleCategory'></view>
+      <view bindtap='toggleCategory'>
+        <view class='hd2 allHd2'></view>
+      </view>
     </view>
+    <view class='separate'></view>
     <view class='category'>
-      <text class='categoryItem' wx:for='{{tabContent}}'>{{item}}</text>
+      <text data-which="{{item.id}}" class='categoryItem {{which==item.id?"categoryItemClick":""}}' bindtap='categoryItemClick' wx:for='{{tabContent}}'>{{item.name}}</text>
     </view>
   </view>
 </view>

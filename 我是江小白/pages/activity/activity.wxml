@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='search'>
+    <view>
+      <image class="img" src="/image/glass.png"></image>
+      <input></input>
+    </view>
+    <view>
+      <text>取消</text>
+    </view>
+  </view>
+  <view class='key'></view>
+</view>

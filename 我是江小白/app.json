@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/activity/activity",
     "pages/choice/choice",
     "pages/city/city",
     "pages/profile/profile",

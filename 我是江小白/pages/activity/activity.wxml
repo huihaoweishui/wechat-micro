@@ -1,13 +1,21 @@
 <!--index.wxml-->
 <view class="container">
+  <view class='hr'></view>
   <view class='search'>
-    <view>
+    <view class='input'>
       <image class="img" src="/image/glass.png"></image>
-      <input></input>
+      <input class='inputContent'></input>
+      <image class="reset" src="/image/trash.png"></image>
     </view>
-    <view>
+    <view class='cancel'>
       <text>取消</text>
     </view>
   </view>
-  <view class='key'></view>
+  <view class='hr2'></view>
+  <view class='key'>
+    <view class='hot'><text>热门关键词</text></view>
+    <view class='list'>
+      <text class='item2' wx:for='{{list}}'>{{item}}</text>
+    </view>
+  </view>
 </view>

@@ -1,4 +1,86 @@
-.img{
+.img {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 18rpx;
+}
+.reset{
   width: 20rpx;
   height: 20rpx;
+  margin-right: 15rpx;
+}
+.container {
+  font-size: 11pt;
+  font-weight: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.hr {
+  height: 3rpx;
+  width: 100%;
+  margin-bottom: 10rpx;
+  background-color: gainsboro;
+}
+
+.hr2 {
+  height: 3rpx;
+  width: 100%;
+  margin-top: 10rpx;
+  background-color: gainsboro;
+}
+
+.search {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: 10rpx;
+  justify-content: baseline;
+}
+
+.input {
+  display: flex;
+  flex-grow: 2;
+  flex-flow: row nowrap;
+  background-color: #eee;
+  border-radius: 12rpx;
+  align-items: center;
+}
+
+.inputContent {
+  margin-left: 18rpx;
+  margin-right: auto;
+}
+
+.cancel {
+  margin: 10rpx;
+  color: #5ca5d6;
+}
+
+.hot {
+  margin: 20rpx;
+  margin-top: 50rpx;
+}
+
+.key {
+  flex-grow: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  background-color: #efeef4;
+}
+
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.item2 {
+  font-size: 10pt;
+  margin: 15rpx;
+  padding: 15rpx 45rpx;
+  border: 2rpx solid gainsboro;
 }

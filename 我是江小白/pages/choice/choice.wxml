@@ -31,6 +31,7 @@
   <view class='content'>
     <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="true" scroll-top="{{scrollTop}}">
       <block wx:for="{{content}}" wx:key="{{item.id}}">
+      <navigator url="/pages/detail/detail?id={{item.id}}" >
         <view class='contentItem'>
           <view class='image hehe'>
             <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
@@ -50,6 +51,7 @@
           </view>
         </view>
         <view class='scrollItemHr'></view>
+        </navigator>
       </block>
     </scroll-view>
   </view>

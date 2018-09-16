@@ -1,0 +1,138 @@
+<view class='page'>
+  <view class='hr'></view>
+  <view class='headerImg' style='padding-top:2rpx'>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+  </view>
+  <view class='headerText padding'>
+    <text decode="{{true}}">&nbsp;&nbsp;黄金同步课程--小初高各地教材全包括,在家即可轻松学</text>
+  </view>
+  <view class='visitCount padding'>
+    <view class='watch'>
+      <image class='image' src='/image/location.png'></image>
+      <text class='verticalText'>26090</text>
+    </view>
+    <view class='share'>
+      <image class='image' src='/image/location.png'></image>
+      <text class='verticalText'>26</text>
+    </view>
+    <view class='guarantee'>
+      <image class='image' src='/image/location.png'></image>
+      <text class='verticalText'>交易保障</text>
+    </view>
+  </view>
+  <view class='hr'></view>
+  <view class='dateTime padding'>
+    <image class='image' src='/image/location.png'></image>
+    <text class='verticalText'>08-24 00:00 至2019-08-20 00:00</text>
+  </view>
+  <view class='hr'></view>
+  <view class='activityType padding'>
+    <image class='image' src='/image/location.png'></image>
+    <text class='verticalText'>线上活动</text>
+  </view>
+  <view class='hr'></view>
+  <view class='hasParticipate padding'>
+    <image class='image' src='/image/location.png'></image>
+    <text class='verticalText'>已报名237人/不限制名额</text>
+  </view>
+  <view class='hr'></view>
+  <view class='price padding'>
+    <image class='image' src='/image/location.png'></image>
+    <text class='verticalText money'>¥99</text>
+  </view>
+  <view class='hr'></view>
+  <view class='host padding'>
+    <view class='top'>
+      <view class='headSculpture'>
+        <image class='image2' src='/image/location.png'></image>
+      </view>
+      <view class='description'>
+        <view class='name'>
+          <text class='hostName'>慧学堂</text>
+          <image class='image' src='/image/location.png'></image>
+          <text class='host2'>主办方</text>
+        </view>
+        <view class='slogan'>
+          <text>慧学巧思、学问思辨、荟萃一堂、励志教育改革!</text>
+        </view>
+      </view>
+    </view>
+    <view class='isFoucus'>
+      <text>+关注</text>
+    </view>
+  </view>
+  <view class='hr thickHr'></view>
+  <view class='pictureList'>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+  </view>
+  <view class='collectionAndReport padding'>
+    <view class='collection'>
+      <image class='image' src='/image/location.png'></image>
+      <text>收藏</text>
+    </view>
+    <view class='report'>
+      <text>举报</text>
+    </view>
+  </view>
+  <view class='hr thickHr'></view>
+  <view class='enroll padding'>
+    <view class='hasParticipateCount'>
+      <text>已报名</text>
+      <text>(143)</text>
+    </view>
+    <view class='more'>
+      <text decode="true">更多报名></text>
+    </view>
+  </view>
+  <view class='hr'></view>
+  <view class='participateList padding+'>
+    <image class='image2' src='/image/location.png'></image>
+    <image class='image2' src='/image/location.png'></image>
+    <image class='image2' src='/image/location.png'></image>
+    <image class='image2' src='/image/location.png'></image>
+    <image class='image2' src='/image/location.png'></image>
+    <image class='image2' src='/image/location.png'></image>
+    <image class='image2' src='/image/location.png'></image>
+  </view>
+  <view class='hr thickHr'></view>
+  <view class='padding'>
+    <text>为你推荐</text>
+  </view>
+  <view class='hr'></view>
+  <view class='content'>
+    <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="true" scroll-top="{{scrollTop}}">
+      <block wx:for="{{content}}" wx:key="{{item.id}}">
+        <navigator url="/pages/detail/detail?id={{item.id}}">
+          <view class='contentItem padding'>
+            <view class='image3 hehe'>
+              <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+            </view>
+            <view class='rightContent hehe'>
+              <view class='title'>
+                <text>{{item.title}}</text>
+              </view>
+              <view class='stateAndPlace'>
+                <text>{{item.state}}</text>
+                <text style='margin-left:15rpx;'>{{item.place}}</text>
+              </view>
+              <view class='priceAndOperation'>
+                <text class='price'>{{item.price}}</text>
+                <text class='operation'>{{item.operationName}}</text>
+              </view>
+            </view>
+          </view>
+           <view class='hr'></view>
+        </navigator>
+      </block>
+    </scroll-view>
+  </view>
+</view>

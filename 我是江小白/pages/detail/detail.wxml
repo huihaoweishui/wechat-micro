@@ -137,7 +137,7 @@
       </block>
       <!-- </scroll-view> -->
     </view>
-    <view class='fixed' hidden='true'>
+    <view class='fixed' hidden='{{fixed}}'>
       <view class='back'>
         <image class='image2' src='/image/location.png'></image>
       </view>
@@ -164,10 +164,10 @@
       </view>
     </view>
     <!-- 报名 -->
-    <view class='baoming'>
+    <view class='baoming' hidden='{{baoming}}'>
       <view class='chooseTitle padding2'>
         <text>请选择</text>
-        <text class='cancel'>×</text>
+        <text class='cancel' bindtap='cancel'>×</text>
       </view>
       <view class='chooseTicket padding2'>
         <view class='chooseType'>
@@ -186,7 +186,7 @@
           <text class='minus'>—</text>
           <text class='count'>1</text>
           <text class='plus'>+</text>
-          <text class='leftCOunt'>剩余857张</text>
+          <text class='leftCount'>剩余857张</text>
         </view>
       </view>
       <view>
@@ -194,11 +194,52 @@
           <text class='countTotal'>合计</text>
           <text class='totalPrice'>¥78</text>
         </view>
-        <view class='next padding3'>
+        <view class='next padding3' bindtap='next'>
           <text>下一步</text>
         </view>
       </view>
+    </view>
+    <!-- 下一步1 -->
+    <view class='next1' hidden='{{next1}}'>
+      <view class='nextTitle padding5'>
+        <text class='fanhui' decode='{{true}}' bindtap='previous'>&lt;</text>
+        <text>请填写报名信息</text>
+        <text class='nextCancel' bindtap='nextCancel'>×</text>
+      </view>
+      <view class=' '>
+        <view class='nextName padding5'>
+          <text>姓名</text>
+          <input class='input'></input>
+        </view>
+        <view class='nextPhone padding5'>
+          <text>手机</text>
+          <input class='input'></input>
+        </view>
+        <view class='nextAddress padding5'>
+          <text>地址</text>
+          <input class='input'></input>
+        </view>
+        <view class='nextChild padding5'>
+          <text>孩子基本情况</text>
+          <input class='input'></input>
+        </view>
+        <view class='hudongba' style='text-align:center;font-size:8pt;padding:10rpx'>
+          <text>本活动由互动吧提供技术服务支持</text>
+        </view>
+      </view>
+      <view>
+        <view class='total padding3'>
+          <text class='countTotal'>合计</text>
+          <text class='totalPrice'>¥78</text>
+        </view>
+        <view class='next padding3' bindtap='next1'>
+          <navigator url="/pages/order/order">
+            <text>下一步</text>
+          </navigator>
+        </view>
 
+      </view>
     </view>
   </scroll-view>
+  <view class='mask' hidden='{{mask}}' bindtap='cancel'></view>
 </view>

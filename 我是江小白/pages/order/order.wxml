@@ -1,0 +1,58 @@
+<!-- navigator.wxml -->
+<view class='container' catchtouchmove='hehe'>
+  <view class='hr'></view>
+  <view class='header padding'>
+    <text style='margin-right:auto'>报名人信息</text>
+    <text style='margin-right:15rpx;'>张三(15906195613)</text>
+    <text decode='{{true}}'>&gt;</text>
+  </view>
+  <view class='hr thickHr'></view>
+  <view class='host padding'>
+    <image class='hostImage' src='/image/location.png'></image>
+    <text style='margin-left:10rpx;'>慧学堂</text>
+  </view>
+  <view class='orderDetail'>
+    <navigator url="/pages/detail/detail?id={{item.id}}">
+      <view class='contentItem padding'>
+        <view class='image hehe'>
+          <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+        </view>
+        <view class='rightContent'>
+          <view class='title'>
+            <text>黄金同步课程---小初高各地教材全包括,在家即可轻松学</text>
+          </view>
+          <view class='stateAndPlace' style='margin-top:8rpx;'>
+            <text>时间: 2018-08-31 00:00开始</text>
+          </view>
+          <view class='stateAndPlace'>
+            <text>线上活动</text>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class='header padding font'>
+    <text style='margin-right:auto'>黄金同步学习卡(永久)</text>
+    <text style='margin-right:15rpx;'>×1</text>
+    <text decode='{{true}}'>¥78</text>
+  </view>
+  <view class='hr thickHr'></view>
+  <view class='header padding'>
+    <text style='margin-right:auto'>优惠券</text>
+    <text style='margin-right:15rpx;'>无可用优惠券</text>
+    <text decode='{{true}}'>&gt;</text>
+  </view>
+  <view class='guarantee padding left'>
+    <image class='image2' src='/image/location.png'></image>
+    <text>交易保障</text>
+  </view>
+  <view class='heji'>
+    <view class='total padding3'>
+      <text class='countTotal'>合计</text>
+      <text class='totalPrice'>¥78</text>
+    </view>
+    <view class='next padding3' bindtap='next'>
+      <text>马上支付</text>
+    </view>
+  </view>
+</view>

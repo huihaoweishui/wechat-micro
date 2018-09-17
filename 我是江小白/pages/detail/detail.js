@@ -1,6 +1,10 @@
 const app = getApp()
 Page({
   data: {
+    baoming: true,
+    fixed: false,
+    next1: true,
+    mask: true,
     content: [{
       id: 1,
       imageSrc: "/image/green_tri.png",
@@ -118,7 +122,49 @@ Page({
       content: oldData
     })
   },
-  join:function(){
-    
+  join: function() {
+    this.setData({
+      fixed: true,
+      baoming: false,
+      mask: false
+    })
+  },
+  cancel: function() {
+    this.setData({
+      fixed: false,
+      baoming: true,
+      mask: true,
+      next1: true
+    })
+  },
+  nextCancel: function() {
+    this.setData({
+      fixed: false,
+      baoming: true,
+      mask: true,
+      next1: true
+    })
+  },
+  next: function() {
+    this.setData({
+      baoming: true,
+      next1: false
+    })
+  },
+  next1: function() {
+    this.setData({
+      fixed: false,
+      baoming: true,
+      mask: true,
+      next1: true
+    })
+  },
+  previous: function() {
+    this.setData({
+      fixed: false,
+      baoming: false,
+      mask: false,
+      next1: true
+    })
   }
 })

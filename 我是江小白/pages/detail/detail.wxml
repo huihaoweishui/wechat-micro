@@ -44,7 +44,7 @@
   <view class='host padding'>
     <view class='top'>
       <view class='headSculpture'>
-        <image class='image2' src='/image/location.png'></image>
+        <image class='hostImage' src='/image/location.png'></image>
       </view>
       <view class='description'>
         <view class='name'>
@@ -130,9 +130,35 @@
               </view>
             </view>
           </view>
-           <view class='hr'></view>
+          <view class='hr'></view>
         </navigator>
       </block>
     </scroll-view>
+  </view>
+  <view class='fixed padding'>
+    <view class='back'>
+      <image class='image2' src='/image/location.png'></image>
+    </view>
+    <view class='other'>
+      <view class='publish otherItem'>
+        <view>
+          <image class='image4' src='/image/location.png'></image>
+        </view>
+        <view>
+          <text class='text'>免费发活动</text>
+        </view>
+      </view>
+      <view class='shareWith otherItem'>
+        <view>
+          <image class='image4' src='/image/location.png'></image>
+        </view>
+        <view>
+          <text class='text'>分享</text>
+        </view>
+      </view>
+      <view class='enroll2'>
+        <text class='enrollText'>我要报名</text>
+      </view>
+    </view>
   </view>
 </view>

@@ -91,17 +91,34 @@ Page({
     wx.getSystemInfo({
       success: function(res) {
         let height = res.windowHeight;
-        // 排除法 减去其他容器的高度
-        wx.createSelectorQuery().selectAll('.city-bar').boundingClientRect(function(rects) {
-          rects.forEach(function(rect) {
-            self.setData({
-              scrollHeight: height - rect.bottom + "px"
-            });
+        var query = wx.createSelectorQuery();
+        query.select('.other').boundingClientRect(function(rect) {
+          self.setData({
+            scrollHeight: height - rect.height + 'px'
           })
         }).exec();
       },
     })
-
-
+  },
+  toBottom: function() {
+    console.log("toBottom");
+    var that = this;
+    var je = {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }
+    var oldData = that.data.content;
+    oldData.push(je);
+    that.setData({
+      content: oldData
+    })
+  },
+  join:function(){
+    
   }
 })

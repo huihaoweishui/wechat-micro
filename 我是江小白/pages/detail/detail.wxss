@@ -37,6 +37,16 @@
 
 .money {
   color: orange;
+  margin-right: auto;
+}
+
+.hd {
+  height: 13rpx;
+  width: 13rpx;
+  border-width: 3rpx 3rpx 0 0;
+  border-style: solid;
+  transform: rotate(45deg);
+  margin-right: 15rpx;
 }
 
 .hr {
@@ -95,7 +105,7 @@
 }
 
 .isFoucus {
-  color: blue;
+  color: #009ae8;
 }
 
 .thickHr {
@@ -104,7 +114,7 @@
 
 .host2 {
   padding: 5rpx 10rpx;
-  background-color: lightblue;
+  background-color: light#009ae8;
 }
 
 .pictureList {
@@ -117,7 +127,7 @@
 }
 
 .collection {
-  color: blue;
+  color: #009ae8;
   margin-right: auto;
 }
 
@@ -136,14 +146,14 @@
 }
 
 .more {
-  color: blue;
+  color: #009ae8;
   margin-right: 10rpx;
 }
 
 .participateList {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .scrollContentView {
@@ -207,6 +217,9 @@
 
 .price {
   font-size: 25rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
 .operation {
@@ -220,36 +233,153 @@
   margin-right: 20rpx;
 }
 
-
-.fixed{
+.fixed {
+  width: 100%;
   font-size: 9pt;
+  position: fixed;
+  bottom: 0;
 }
-.otherItem{
-   flex-flow: column nowrap;
+
+.otherItem {
+  width: 20%;
+  flex-flow: column nowrap;
   justify-content: flex-start;
-  align-items: center
+  align-items: center;
 }
+
 .image4 {
-  width: 50rpx;
-  height: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
   border-radius: 100rpx;
   background-color: gainsboro;
 }
-.back{
-  text-align: right
+
+.back {
+  text-align: right;
+  margin-right: 20rpx;
 }
-.other{
-   display: flex;
+
+.other {
+  margin-top: 40rpx;
+  display: flex;
   flex-flow: row nowrap;
   justify-content: baseline;
+  background-color: gainsboro;
+  border-bottom-right-radius: 5rpx;
+  border-bottom-left-radius: 5rpx;
 }
-.enroll2{
-  flex-grow: 2;
-  background-color: blue;
+
+.enroll2 {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 60%;
+  background-color: #009ae8;
+  align-items: center;
+  justify-content: center;
+}
+
+.enrollText {
+  font-size: 10pt;
+  color: white;
+}
+
+.image5 {
   text-align: center;
-  display: table-cell
 }
-.enrollText{
- color: white;
- vertical-align: middle
+
+.fixedText {
+  text-align: center;
+}
+
+/* 报名 */
+
+.baoming {
+  width: 100%;
+  font-size: 9pt;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #ffffff;
+  border-bottom-right-radius: 5rpx;
+  border-bottom-left-radius: 5rpx;
+}
+
+.chooseTitle {
+  text-align: center;
+}
+
+.cancel {
+  float: right;
+  margin-right: 15rpx;
+}
+
+.padding2 {
+  padding: 25rpx 20rpx;
+}
+
+.choosePrice {
+  float: right;
+  margin-right: 15rpx;
+  color: orange;
+}
+
+.menu {
+  border: 1rpx solid #009ae8;
+  border-radius: 10rpx;
+  padding: 20rpx 5rpx;
+}
+
+.minus {
+  margin: 5rpx;
+  padding: 5rpx 10rpx;
+  border: 1rpx solid grey;
+}
+
+.plus {
+  margin: 5rpx;
+  padding: 5rpx 10rpx;
+  border: 1rpx solid grey;
+}
+
+.count {
+  margin: 5rpx;
+  padding: 5rpx 15rpx;
+  border: 1rpx solid grey;
+}
+
+.chooseType {
+  padding: 8rpx;
+}
+
+.leftCOunt {
+  margin-left: 20rpx;
+}
+.total{
+  display: inline-block;
+  border-top: 1rpx solid gainsboro;
+  width: 50%;
+}
+.totalPrice {
+  color: orange;
+  margin-left: 10rpx;
+}
+
+.next {
+  font-size: 11pt;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  background-color: #009ae8;
+}
+.padding3{
+  padding-top: 18rpx;
+  padding-bottom: 18rpx;
+}
+.operation2{
+  padding: 20rpx 5rpx;
+}
+.countTotal{
+  margin-left: 28rpx;
 }

@@ -1,115 +1,117 @@
 <view class='page'>
-  <view class='hr'></view>
-  <view class='headerImg' style='padding-top:2rpx'>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-  </view>
-  <view class='headerText padding'>
-    <text decode="{{true}}">&nbsp;&nbsp;黄金同步课程--小初高各地教材全包括,在家即可轻松学</text>
-  </view>
-  <view class='visitCount padding'>
-    <view class='watch'>
-      <image class='image' src='/image/location.png'></image>
-      <text class='verticalText'>26090</text>
+  <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="true" scroll-top="{{scrollTop}}">
+    <view class='hr'></view>
+    <view class='headerImg' style='padding-top:2rpx'>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
     </view>
-    <view class='share'>
-      <image class='image' src='/image/location.png'></image>
-      <text class='verticalText'>26</text>
+    <view class='headerText padding'>
+      <text decode="{{true}}">&nbsp;&nbsp;黄金同步课程--小初高各地教材全包括,在家即可轻松学</text>
     </view>
-    <view class='guarantee'>
-      <image class='image' src='/image/location.png'></image>
-      <text class='verticalText'>交易保障</text>
-    </view>
-  </view>
-  <view class='hr'></view>
-  <view class='dateTime padding'>
-    <image class='image' src='/image/location.png'></image>
-    <text class='verticalText'>08-24 00:00 至2019-08-20 00:00</text>
-  </view>
-  <view class='hr'></view>
-  <view class='activityType padding'>
-    <image class='image' src='/image/location.png'></image>
-    <text class='verticalText'>线上活动</text>
-  </view>
-  <view class='hr'></view>
-  <view class='hasParticipate padding'>
-    <image class='image' src='/image/location.png'></image>
-    <text class='verticalText'>已报名237人/不限制名额</text>
-  </view>
-  <view class='hr'></view>
-  <view class='price padding'>
-    <image class='image' src='/image/location.png'></image>
-    <text class='verticalText money'>¥99</text>
-  </view>
-  <view class='hr'></view>
-  <view class='host padding'>
-    <view class='top'>
-      <view class='headSculpture'>
-        <image class='hostImage' src='/image/location.png'></image>
+    <view class='visitCount padding'>
+      <view class='watch'>
+        <image class='image' src='/image/location.png'></image>
+        <text class='verticalText'>26090</text>
       </view>
-      <view class='description'>
-        <view class='name'>
-          <text class='hostName'>慧学堂</text>
-          <image class='image' src='/image/location.png'></image>
-          <text class='host2'>主办方</text>
-        </view>
-        <view class='slogan'>
-          <text>慧学巧思、学问思辨、荟萃一堂、励志教育改革!</text>
-        </view>
+      <view class='share'>
+        <image class='image' src='/image/location.png'></image>
+        <text class='verticalText'>26</text>
+      </view>
+      <view class='guarantee'>
+        <image class='image' src='/image/location.png'></image>
+        <text class='verticalText'>交易保障</text>
       </view>
     </view>
-    <view class='isFoucus'>
-      <text>+关注</text>
-    </view>
-  </view>
-  <view class='hr thickHr'></view>
-  <view class='pictureList'>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-    <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
-  </view>
-  <view class='collectionAndReport padding'>
-    <view class='collection'>
+    <view class='hr'></view>
+    <view class='dateTime padding'>
       <image class='image' src='/image/location.png'></image>
-      <text>收藏</text>
+      <text class='verticalText'>08-24 00:00 至2019-08-20 00:00</text>
     </view>
-    <view class='report'>
-      <text>举报</text>
+    <view class='hr'></view>
+    <view class='activityType padding'>
+      <image class='image' src='/image/location.png'></image>
+      <text class='verticalText'>线上活动</text>
     </view>
-  </view>
-  <view class='hr thickHr'></view>
-  <view class='enroll padding'>
-    <view class='hasParticipateCount'>
-      <text>已报名</text>
-      <text>(143)</text>
+    <view class='hr'></view>
+    <view class='hasParticipate padding'>
+      <image class='image' src='/image/location.png'></image>
+      <text class='verticalText'>已报名237人/不限制名额</text>
     </view>
-    <view class='more'>
-      <text decode="true">更多报名></text>
+    <view class='hr'></view>
+    <view class='price padding' bindtap='join'>
+      <image class='image' src='/image/location.png'></image>
+      <text class='verticalText money'>¥99</text>
+      <view class='hd'></view>
     </view>
-  </view>
-  <view class='hr'></view>
-  <view class='participateList padding+'>
-    <image class='image2' src='/image/location.png'></image>
-    <image class='image2' src='/image/location.png'></image>
-    <image class='image2' src='/image/location.png'></image>
-    <image class='image2' src='/image/location.png'></image>
-    <image class='image2' src='/image/location.png'></image>
-    <image class='image2' src='/image/location.png'></image>
-    <image class='image2' src='/image/location.png'></image>
-  </view>
-  <view class='hr thickHr'></view>
-  <view class='padding'>
-    <text>为你推荐</text>
-  </view>
-  <view class='hr'></view>
-  <view class='content'>
-    <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="true" scroll-top="{{scrollTop}}">
+    <view class='hr'></view>
+    <view class='host padding'>
+      <view class='top'>
+        <view class='headSculpture'>
+          <image class='hostImage' src='/image/location.png'></image>
+        </view>
+        <view class='description'>
+          <view class='name'>
+            <text class='hostName'>慧学堂</text>
+            <image class='image' src='/image/location.png'></image>
+            <text class='host2'>主办方</text>
+          </view>
+          <view class='slogan'>
+            <text>慧学巧思、学问思辨、荟萃一堂、励志教育改革!</text>
+          </view>
+        </view>
+      </view>
+      <view class='isFoucus'>
+        <text>+关注</text>
+      </view>
+    </view>
+    <view class='hr thickHr'></view>
+    <view class='pictureList'>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+      <image src='/image/them.jpg' mode='scaleToFill' style='width:100%'></image>
+    </view>
+    <view class='collectionAndReport padding'>
+      <view class='collection'>
+        <image class='image' src='/image/location.png'></image>
+        <text>收藏</text>
+      </view>
+      <view class='report'>
+        <text>举报</text>
+      </view>
+    </view>
+    <view class='hr thickHr'></view>
+    <view class='enroll padding'>
+      <view class='hasParticipateCount'>
+        <text>已报名</text>
+        <text>(143)</text>
+      </view>
+      <view class='more'>
+        <text decode="true">更多报名></text>
+      </view>
+    </view>
+    <view class='hr'></view>
+    <view class='participateList padding+'>
+      <image class='image2' src='/image/location.png'></image>
+      <image class='image2' src='/image/location.png'></image>
+      <image class='image2' src='/image/location.png'></image>
+      <image class='image2' src='/image/location.png'></image>
+      <image class='image2' src='/image/location.png'></image>
+      <image class='image2' src='/image/location.png'></image>
+      <image class='image2' src='/image/location.png'></image>
+    </view>
+    <view class='hr thickHr'></view>
+    <view class='padding'>
+      <text>为你推荐</text>
+    </view>
+    <view class='hr'></view>
+    <view class='content'>
+      <!-- <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="true" scroll-top="{{scrollTop}}"> -->
       <block wx:for="{{content}}" wx:key="{{item.id}}">
         <navigator url="/pages/detail/detail?id={{item.id}}">
           <view class='contentItem padding'>
@@ -133,32 +135,70 @@
           <view class='hr'></view>
         </navigator>
       </block>
-    </scroll-view>
-  </view>
-  <view class='fixed padding'>
-    <view class='back'>
-      <image class='image2' src='/image/location.png'></image>
+      <!-- </scroll-view> -->
     </view>
-    <view class='other'>
-      <view class='publish otherItem'>
-        <view>
-          <image class='image4' src='/image/location.png'></image>
-        </view>
-        <view>
-          <text class='text'>免费发活动</text>
-        </view>
+    <view class='fixed' hidden='true'>
+      <view class='back'>
+        <image class='image2' src='/image/location.png'></image>
       </view>
-      <view class='shareWith otherItem'>
-        <view>
-          <image class='image4' src='/image/location.png'></image>
+      <view class='other'>
+        <view class='publish otherItem'>
+          <view class='image5'>
+            <image class='image4' src='/image/location.png'></image>
+          </view>
+          <view class='fixedText'>
+            <text class='text'>免费发活动</text>
+          </view>
         </view>
-        <view>
-          <text class='text'>分享</text>
+        <view class='shareWith otherItem'>
+          <view class='image5'>
+            <image class='image4' src='/image/location.png'></image>
+          </view>
+          <view class='fixedText'>
+            <text class='text'>分享</text>
+          </view>
         </view>
-      </view>
-      <view class='enroll2'>
-        <text class='enrollText'>我要报名</text>
+        <view class='enroll2' bindtap='join'>
+          <text class='enrollText'>我要报名</text>
+        </view>
       </view>
     </view>
-  </view>
+    <!-- 报名 -->
+    <view class='baoming'>
+      <view class='chooseTitle padding2'>
+        <text>请选择</text>
+        <text class='cancel'>×</text>
+      </view>
+      <view class='chooseTicket padding2'>
+        <view class='chooseType'>
+          <text>选择票种</text>
+        </view>
+        <view class='padding2 menu'>
+          <text>黄金同步学习卡(永久)</text>
+          <text class='choosePrice'>¥78</text>
+        </view>
+      </view>
+      <view class='chooseCount padding2'>
+        <view class='chooseType'>
+          <text>选择数量</text>
+        </view>
+        <view class='operation2'>
+          <text class='minus'>—</text>
+          <text class='count'>1</text>
+          <text class='plus'>+</text>
+          <text class='leftCOunt'>剩余857张</text>
+        </view>
+      </view>
+      <view>
+        <view class='total padding3'>
+          <text class='countTotal'>合计</text>
+          <text class='totalPrice'>¥78</text>
+        </view>
+        <view class='next padding3'>
+          <text>下一步</text>
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
 </view>

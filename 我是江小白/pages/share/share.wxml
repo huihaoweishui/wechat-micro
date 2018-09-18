@@ -8,17 +8,43 @@
         <image class='hostImage' src='/image/location.png'></image>
       </view>
       <view class='slogan'>
-        <text>慧学堂</text>
-        <text>邀你一起参加活动</text>
+        <text style='color:#0198e9;font-size:9pt'>慧学堂</text>
+        <text style='font-size:8pt'>邀你一起参加活动</text>
       </view>
     </view>
-     <view class='hr'></view>
-     <!-- 活动描述 -->
-     <view>
-      <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
-      <text>黄金同步课程--小初高各地教材全包括,在家即可轻松学</text>
-     </view>
+    <!-- 活动描述 -->
+    <view class='activity'>
+      <view class='item1'>
+        <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+        <text class='title' decode='{{true}}'>&nbsp;黄金同步课程--小初高各地教材全包括,在家即可轻松学</text>
+      </view>
+      <view class='item'>
+        <image class='image' src='/image/location.png'></image>
+        <text style='font-size:8pt'>2018-08-31 00:00:00</text>
+      </view>
+      <view class='item'>
+        <image class='image' src='/image/location.png'></image>
+        <text style='font-size:8pt'>线上活动</text>
+      </view>
+    </view>
   </view>
   <!-- 下半部分 -->
-  <view class='bottom'></view>
+  <view class='bottom'>
+    <view class='separate1'>
+      <view class='separate'></view>
+      <text style='font-size:10pt'>分享活动卡给好友</text>
+      <view class='separate'></view>
+    </view>
+    <view class='shareImg'>
+      <view class='image6'>
+        <image class='hostImage' src='/image/icon64_appwx_logo.png'></image>
+        <text class='iconText'>微信好友</text>
+      </view>
+      <view class='image6'>
+        <image class='hostImage' src='/image/location.png'></image>
+        <text class='iconText'>保存图片</text>
+      </view>
+    </view>
+  </view>
+
 </view>

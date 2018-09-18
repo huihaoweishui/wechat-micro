@@ -51,7 +51,7 @@
       <text class='countTotal'>合计</text>
       <text class='totalPrice'>¥78</text>
     </view>
-    <view class='next padding3' bindtap='next'>
+    <view class='next padding3' bindtap='next2'>
       <text>马上支付</text>
     </view>
   </view>

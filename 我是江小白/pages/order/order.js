@@ -61,7 +61,19 @@ Page({
     })
   },
   hehe: function() {
-   
-  }
 
+  },
+
+  next2: function() {
+    // wx.requestPayment({
+    //   timeStamp:new Date().toDateString,
+    //   nonceStr:'12',
+    //   package:,
+    //   signType:,
+    //   paySign:,
+    //   success:,
+    //   fail:,
+    //   complete:,
+    // })
+  }
 })

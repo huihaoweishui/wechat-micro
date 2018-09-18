@@ -151,12 +151,14 @@
           </view>
         </view>
         <view class='shareWith otherItem'>
-          <view class='image5'>
-            <image class='image4' src='/image/location.png'></image>
-          </view>
-          <view class='fixedText'>
-            <text class='text'>分享</text>
-          </view>
+          <navigator url="/pages/share/share">
+            <view class='image5'>
+              <image class='image4' src='/image/location.png'></image>
+            </view>
+            <view class='fixedText'>
+              <text class='text'>分享</text>
+            </view>
+          </navigator>
         </view>
         <view class='enroll2' bindtap='join'>
           <text class='enrollText'>我要报名</text>

@@ -5,14 +5,104 @@ Page({
     lineHeight: '0.1rpx',
     date: '',
     sexData:["男","女"],
+    scrollY: true,
+    scrollTop: 0,
+    scrollHeight: '0rpx;',
+    content: [{
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }, {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }, {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }, {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }, {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }, {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }, {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }, {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }, {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }, {
+      id: 1,
+      imageSrc: "/image/green_tri.png",
+      title: "1v1线上钢琴陪练!专业老师陪孩子,解放家长!(0基础请勿报名)",
+      state: "进行中",
+      place: "线上活动",
+      price: "免费",
+      operationName: "报名将截止"
+    }],
   },
   onLoad: function(options) {
     let self = this;
     wx.getSystemInfo({
-      success: function(res) {
-        self.setData({
-          lineHeight: app.globalData.rate * 1 + "rpx",
-        })
+      success: function (res) {
+        // 排除法 减去其他容器的高度
+        let height = res.windowHeight;
+        wx.createSelectorQuery().selectAll('.search-bar').boundingClientRect(function (rects) {
+          rects.forEach(function (rect) {
+            self.setData({
+              scrollHeight: height - rect.bottom + "px"
+            });
+          })
+        }).exec();
       },
     })
   },

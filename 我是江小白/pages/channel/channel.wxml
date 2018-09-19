@@ -6,21 +6,23 @@
       <view class='hd'></view>
     </view>
     <view class='search item'>
-      <image class="img searchImg" src="/image/glass.png"></image>
-      <text class="searchText">搜索感兴趣的活动</text>
+      <navigator url="/pages/activity/activity">
+        <image class="img searchImg" src="/image/glass.png"></image>
+        <text class="searchText">搜索感兴趣的活动</text>
+      </navigator>
     </view>
   </view>
   <view class='headerEndLine' style='margin-top: {{secondLineTopMargin}};'></view>
   <view class='module'>
     <block wx:for="{{moduleList}}" wx:key="{{item.id}}">
-        <view class='moduleItem'>
-          <view class='moduleImg'>
-            <image class='contentImg' mode='scaleToFill' src='{{item.imgSrc}}'></image>
-          </view>
-          <view class='moduleName'>
-            <text>{{item.name}}</text>
-          </view>
+      <view class='moduleItem'>
+        <view class='moduleImg'>
+          <image class='contentImg' mode='scaleToFill' src='{{item.imgSrc}}'></image>
         </view>
+        <view class='moduleName'>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
     </block>
   </view>
 </view>

@@ -1,6 +1,93 @@
- <view class='orderView'>
+<view class='orderView'>
+  <!-- <view class='noFocus search-bar' hidden='{{true}}'>
     <view class='noOrderView'>
       <image class='noOrder' src='/image/plus.png'></image>
     </view>
     <view class='noOrderText'>没有关注过主办方哦</view>
-  </view>
+  </view> -->
+  <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}">
+    <view class='myFocus'>
+      <text>我关注了2个主办方</text>
+    </view>
+    <view class='viewItem'>
+      <view class='top'>
+        <view class='header'>
+          <image class='image' src='/image/location.png'></image>
+        </view>
+        <view class='right'>
+          <view class='up'>
+            <text class='text1 bigger'>慧学堂</text>
+            <image class='image icon' src='/image/location.png'></image>
+            <text class='choose' bindtap='show'>...</text>
+          </view>
+          <view class='slogan'>
+            <text class='text1'>慧学巧思、学问思辨、荟萃一堂、励志教育改革!</text>
+          </view>
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='bottom'>
+        <view class='item'>
+          <view>
+            <image class='image icon2' src='/image/location.png'></image>
+          </view>
+          <text class='text2'>武汉</text>
+        </view>
+        <view class='vertical'></view>
+        <view class='item'>
+          <view>
+            <image class='image icon2' src='/image/location.png'></image>
+          </view>
+          <text class='text2'>1场活动</text>
+        </view>
+        <view class='vertical'></view>
+        <view class='item'>
+          <view>
+            <image class='image icon2' src='/image/location.png'></image>
+          </view>
+          <text class='text2'>146人报名</text>
+        </view>
+      </view>
+    </view>
+    <view class='viewItem'>
+      <view class='top'>
+        <view class='header'>
+          <image class='image' src='/image/location.png'></image>
+        </view>
+        <view class='right'>
+          <view class='up'>
+            <text class='text1 bigger'>慧学堂</text>
+            <image class='image icon' src='/image/location.png'></image>
+            <text class='choose' bindtap='show'>...</text>
+          </view>
+          <view class='slogan'>
+            <text class='text1'>慧学巧思、学问思辨、荟萃一堂、励志教育改革!</text>
+          </view>
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='bottom'>
+        <view class='item'>
+          <view>
+            <image class='image icon2' src='/image/location.png'></image>
+          </view>
+          <text class='text2'>武汉</text>
+        </view>
+        <view class='vertical'></view>
+        <view class='item'>
+          <view>
+            <image class='image icon2' src='/image/location.png'></image>
+          </view>
+          <text class='text2'>1场活动</text>
+        </view>
+        <view class='vertical'></view>
+        <view class='item'>
+          <view>
+            <image class='image icon2' src='/image/location.png'></image>
+          </view>
+          <text class='text2'>146人报名</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

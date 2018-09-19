@@ -1,8 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='headerLine' style='margin-bottom:{{firstLineBottomMargin}}'></view>
+<scroll-view class='scrollView' scroll-y="{{true}}" style="height:{{scrollHeight}}" bindscrolltolower="lower" scroll-top="{{scrollTop}}">
+  <view class='headerLine city-bar' style='margin-bottom:{{firstLineBottomMargin}}'></view>
   <navigator url="/pages/profile/profile?title=navigate" hover-class="navigator-hover">
-    <view class='header'>
+    <view class='header city-bar'>
       <view class='imgView'>
         <image mode='scaleToFill' class='img' src='/image/location.png'></image>
       </view>
@@ -12,13 +13,13 @@
       <view class='hd'></view>
     </view>
   </navigator>
-  <view class='line1'></view>
-  <view class='middle'>
+  <view class='line1 city-bar'></view>
+  <view class='middle city-bar'>
 
     <view class='collection item'>
       <navigator url="/pages/collection/collection">
         <view>
-          <text>0</text>
+          <text>8</text>
         </view>
         <view>
           <text>收藏</text>
@@ -31,7 +32,7 @@
     <view class='focus item'>
       <navigator url="/pages/focus/focus">
         <view>
-          <text>0</text>
+          <text>8</text>
         </view>
         <view>
           <text>关注</text>
@@ -40,10 +41,203 @@
     </view>
 
   </view>
+
   <view class='orderView'>
-    <view class='noOrderView'>
+    <!-- <view class='noOrderView'>
       <image class='noOrder' src='/image/plus.png'></image>
     </view>
-    <view class='noOrderText'>你还没有订单</view>
+    <view class='noOrderText'>你还没有订单</view> -->
+    <view class='allOrder city-bar'>
+      <view class='vertical'></view>
+      <text>全部订单</text>
+    </view>
+    
+      <view class='host order'>
+        <image class='hostImage' src='/image/location.png'></image>
+        <text class='stateAndPlace' style='margin-left:10rpx;margin-right:auto'>慧学堂</text>
+        <text class='stateAndPlace' style='color:orange'>交易关闭</text>
+      </view>
+      <view class='orderDetail '>
+        <navigator url="/pages/detail/detail?id={{item.id}}">
+          <view class='contentItem order'>
+            <view class='image hehe'>
+              <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+            </view>
+            <view class='rightContent'>
+              <view class='title'>
+                <text style='font-size:10pt;'>黄金同步课程---小初高各地教材全包括,在家即可轻松学</text>
+              </view>
+              <view class='stateAndPlace' style='margin-top:8rpx;'>
+                <text>时间: 2018-08-31 00:00开始</text>
+              </view>
+              <view class='stateAndPlace'>
+                <text>线上活动</text>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class='header order font'>
+        <text style='margin-right:auto'>黄金同步学习卡(永久)</text>
+        <text style='margin-right:15rpx;'>×1</text>
+        <text decode='{{true}}'>¥78</text>
+      </view>
+      <view class='hr'></view>
+      <view class='total order'>
+        <text>共1张票</text>
+        <text style='margin-right:15rpx;'>合计:</text>
+        <text decode='{{true}}'>¥78.00</text>
+      </view>
+      <view class='hr thickHr'></view>
+      <view class='host order'>
+        <image class='hostImage' src='/image/location.png'></image>
+        <text class='stateAndPlace' style='margin-left:10rpx;margin-right:auto'>慧学堂</text>
+        <text class='stateAndPlace' style='color:orange'>交易关闭</text>
+      </view>
+      <view class='orderDetail '>
+        <navigator url="/pages/detail/detail?id={{item.id}}">
+          <view class='contentItem order'>
+            <view class='image hehe'>
+              <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+            </view>
+            <view class='rightContent'>
+              <view class='title'>
+                <text style='font-size:10pt;'>黄金同步课程---小初高各地教材全包括,在家即可轻松学</text>
+              </view>
+              <view class='stateAndPlace' style='margin-top:8rpx;'>
+                <text>时间: 2018-08-31 00:00开始</text>
+              </view>
+              <view class='stateAndPlace'>
+                <text>线上活动</text>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class='header order font'>
+        <text style='margin-right:auto'>黄金同步学习卡(永久)</text>
+        <text style='margin-right:15rpx;'>×1</text>
+        <text decode='{{true}}'>¥78</text>
+      </view>
+      <view class='hr'></view>
+      <view class='total order'>
+        <text>共1张票</text>
+        <text style='margin-right:15rpx;'>合计:</text>
+        <text decode='{{true}}'>¥78.00</text>
+      </view>
+      <view class='hr thickHr'></view>
+      <view class='host order'>
+        <image class='hostImage' src='/image/location.png'></image>
+        <text class='stateAndPlace' style='margin-left:10rpx;margin-right:auto'>慧学堂</text>
+        <text class='stateAndPlace' style='color:orange'>交易关闭</text>
+      </view>
+      <view class='orderDetail '>
+        <navigator url="/pages/detail/detail?id={{item.id}}">
+          <view class='contentItem order'>
+            <view class='image hehe'>
+              <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+            </view>
+            <view class='rightContent'>
+              <view class='title'>
+                <text style='font-size:10pt;'>黄金同步课程---小初高各地教材全包括,在家即可轻松学</text>
+              </view>
+              <view class='stateAndPlace' style='margin-top:8rpx;'>
+                <text>时间: 2018-08-31 00:00开始</text>
+              </view>
+              <view class='stateAndPlace'>
+                <text>线上活动</text>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class='header order font'>
+        <text style='margin-right:auto'>黄金同步学习卡(永久)</text>
+        <text style='margin-right:15rpx;'>×1</text>
+        <text decode='{{true}}'>¥78</text>
+      </view>
+      <view class='hr'></view>
+      <view class='total order'>
+        <text>共1张票</text>
+        <text style='margin-right:15rpx;'>合计:</text>
+        <text decode='{{true}}'>¥78.00</text>
+      </view>
+      <view class='hr thickHr'></view>
+      <view class='host order'>
+        <image class='hostImage' src='/image/location.png'></image>
+        <text class='stateAndPlace' style='margin-left:10rpx;margin-right:auto'>慧学堂</text>
+        <text class='stateAndPlace' style='color:orange'>交易关闭</text>
+      </view>
+      <view class='orderDetail '>
+        <navigator url="/pages/detail/detail?id={{item.id}}">
+          <view class='contentItem order'>
+            <view class='image hehe'>
+              <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+            </view>
+            <view class='rightContent'>
+              <view class='title'>
+                <text style='font-size:10pt;'>黄金同步课程---小初高各地教材全包括,在家即可轻松学</text>
+              </view>
+              <view class='stateAndPlace' style='margin-top:8rpx;'>
+                <text>时间: 2018-08-31 00:00开始</text>
+              </view>
+              <view class='stateAndPlace'>
+                <text>线上活动</text>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class='header order font'>
+        <text style='margin-right:auto'>黄金同步学习卡(永久)</text>
+        <text style='margin-right:15rpx;'>×1</text>
+        <text decode='{{true}}'>¥78</text>
+      </view>
+      <view class='hr'></view>
+      <view class='total order'>
+        <text>共1张票</text>
+        <text style='margin-right:15rpx;'>合计:</text>
+        <text decode='{{true}}'>¥78.00</text>
+      </view>
+      <view class='hr thickHr'></view>
+      <view class='host order'>
+        <image class='hostImage' src='/image/location.png'></image>
+        <text class='stateAndPlace' style='margin-left:10rpx;margin-right:auto'>慧学堂</text>
+        <text class='stateAndPlace' style='color:orange'>交易关闭</text>
+      </view>
+      <view class='orderDetail '>
+        <navigator url="/pages/detail/detail?id={{item.id}}">
+          <view class='contentItem order'>
+            <view class='image hehe'>
+              <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+            </view>
+            <view class='rightContent'>
+              <view class='title'>
+                <text style='font-size:10pt;'>黄金同步课程---小初高各地教材全包括,在家即可轻松学</text>
+              </view>
+              <view class='stateAndPlace' style='margin-top:8rpx;'>
+                <text>时间: 2018-08-31 00:00开始</text>
+              </view>
+              <view class='stateAndPlace'>
+                <text>线上活动</text>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class='header order font'>
+        <text style='margin-right:auto'>黄金同步学习卡(永久)</text>
+        <text style='margin-right:15rpx;'>×1</text>
+        <text decode='{{true}}'>¥78</text>
+      </view>
+      <view class='hr'></view>
+      <view class='total order'>
+        <text>共1张票</text>
+        <text style='margin-right:15rpx;'>合计:</text>
+        <text decode='{{true}}'>¥78.00</text>
+      </view>
+      <view class='hr thickHr'></view>
+   
   </view>
+   </scroll-view>
 </view>

@@ -1,14 +1,14 @@
 {
   "pages": [
+    "pages/choice/choice",
+    "pages/me/me",
+    "pages/order/order",
     "pages/share/share",
     "pages/detail/detail",
-    "pages/order/order",
-    "pages/choice/choice",
     "pages/activity/activity",
     "pages/city/city",
     "pages/profile/profile",
     "pages/nickname/nickname",
-    "pages/me/me",
     "pages/channel/channel",
     "pages/index/index",
     "pages/logs/logs",

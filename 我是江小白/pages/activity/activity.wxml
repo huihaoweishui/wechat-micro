@@ -13,9 +13,12 @@
   </view>
   <view class='hr2'></view>
   <view class='key'>
-    <view class='hot'><text>热门关键词</text></view>
+    <view class='hot'>
+      <text>热门关键词</text>
+    </view>
     <view class='list'>
       <text class='item2' wx:for='{{list}}'>{{item}}</text>
     </view>
   </view>
+
 </view>

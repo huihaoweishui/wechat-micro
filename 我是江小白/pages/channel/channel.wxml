@@ -1,18 +1,21 @@
 <view class='page'>
-  <view class='headerLine' style='margin-bottom:{{firstLineBottomMargin}}'></view>
-  <view class='header'>
-    <view class='city item'>
-      <text>大兴安岭</text>
-      <view class='hd'></view>
+  <view class='headerLine city-bar' style='margin-bottom:{{firstLineBottomMargin}}'></view>
+  <view class='header city-bar'>
+    <view class='city item' bindtap='showCity'>
+      <text>{{currentCity}}</text>
+      <view class='hd' style='transform:{{transformCity}}'></view>
     </view>
     <view class='search item'>
-      <image class="img searchImg" src="/image/glass.png"></image>
-      <text class="searchText">搜索感兴趣的活动</text>
+      <navigator url="/pages/activity/activity">
+        <image class="img searchImg" src="/image/glass.png"></image>
+        <text class="searchText">搜索感兴趣的活动</text>
+      </navigator>
     </view>
   </view>
-  <view class='headerEndLine' style='margin-top: {{secondLineTopMargin}};'></view>
+  <view class='headerEndLine city-bar' style='margin-top: {{secondLineTopMargin}};'></view>
   <view class='module'>
     <block wx:for="{{moduleList}}" wx:key="{{item.id}}">
+      <navigator url='/pages/channelDetailList/channelDetailList'>
         <view class='moduleItem'>
           <view class='moduleImg'>
             <image class='contentImg' mode='scaleToFill' src='{{item.imgSrc}}'></image>
@@ -21,6 +24,31 @@
             <text>{{item.name}}</text>
           </view>
         </view>
+      </navigator>
     </block>
+  </view>
+  <view class='city2' hidden='{{hidden2}}'>
+    <scroll-view class='cityScroll' scroll-y="true" style="height: {{windowHeight2}};" scroll-with-animation="{{animation}}" scroll-into-view="{{toView2}}" scroll-top="{{scrollTop2}}">
+      <view class='titleText'>
+        <text>当前定位城市</text>
+      </view>
+      <view class='position'>
+        <text>正在定位中。。</text>
+      </view>
+      <view class='titleText'>
+        <text>全部城市</text>
+      </view>
+      <view class='initial litter'>
+        <text wx:for="{{initialArray}}" wx:key="{{item}}" class='initialItem' bindtap="anchor" data-initial='{{item}}'>{{item}}   </text>
+      </view>
+      <view wx:for="{{initialAndItsChild}}" wx:key="{{item}}" id="{{item.initial}}">
+        <view class='titleText'>
+          <text>{{item.initial}}</text>
+        </view>
+        <view class='initial'>
+          <text wx:for="{{item.child}}" wx:for-item="item2" wx:key="{{item2}}" data-name='{{item2}}' class='initialItem' bindtap='confirmCity'>{{item2}}</text>
+        </view>
+      </view>
+    </scroll-view>
   </view>
 </view>

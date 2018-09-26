@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/choice/choice",
+    "pages/channelDetailList/channelDetailList",
     "pages/share/share",
     "pages/detail/detail",
     "pages/order/order",
-    "pages/choice/choice",
     "pages/activity/activity",
     "pages/city/city",
     "pages/profile/profile",

@@ -1,0 +1,38 @@
+<view class='container'>
+  <view class='hr'></view>
+  <view class='tab'>
+    <scroll-view class="scrollView" scroll-x="{{scrollX}}" scroll-with-animation="true">
+      <block wx:for="{{tabContent}}" wx:key="{{item.id}}">
+        <view id='{{item.id}}' data-chosen='{{item.id}}' class='scrollItem {{chosen==item.id?"chosen":""}}' bindtap='contentItemCLick'> {{item.name}} </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class='hr search-bar'></view>
+  <view>
+    <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="true" scroll-top="{{scrollTop}}">
+      <block wx:for="{{content}}" wx:key="{{item.id}}">
+      <navigator url="/pages/detail/detail?id={{item.id}}" >
+        <view class='contentItem'>
+          <view class='image hehe'>
+            <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+          </view>
+          <view class='rightContent hehe'>
+            <view class='title'>
+              <text>{{item.title}}</text>
+            </view>
+            <view class='stateAndPlace'>
+              <text>{{item.state}}</text>
+              <text style='margin-left:15rpx;'>{{item.place}}</text>
+            </view>
+            <view class='priceAndOperation'>
+              <text class='price'>{{item.price}}</text>
+              <text class='operation'>{{item.operationName}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='scrollItemHr'></view>
+        </navigator>
+      </block>
+    </scroll-view>
+  </view>
+</view>

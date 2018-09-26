@@ -1,6 +1,36 @@
- <view class='orderView'>
+<view class='orderView'>
+  <view class='scrollItemHr search-bar'></view>
+  <view class='no search-bar' hidden='{{true}}'>
     <view class='noOrderView'>
       <image class='noOrder' src='/image/plus.png'></image>
     </view>
     <view class='noOrderText'>没有收藏记录</view>
   </view>
+  <view class='hasOrder'>
+    <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="true" scroll-top="{{scrollTop}}">
+      <block wx:for="{{content}}" wx:key="{{item.id}}">
+        <navigator url="/pages/detail/detail?id={{item.id}}">
+          <view class='contentItem'>
+            <view class='image hehe'>
+              <image mode='scaleToFill' class="contentImg" src="/image/them.jpg"></image>
+            </view>
+            <view class='rightContent hehe'>
+              <view class='title'>
+                <text>{{item.title}}</text>
+              </view>
+              <view class='stateAndPlace'>
+                <text>{{item.state}}</text>
+                <text style='margin-left:15rpx;'>{{item.place}}</text>
+              </view>
+              <view class='priceAndOperation'>
+                <text class='price'>{{item.price}}</text>
+                <text class='operation'>{{item.operationName}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='scrollItemHr'></view>
+        </navigator>
+      </block>
+    </scroll-view>
+  </view>
+</view>

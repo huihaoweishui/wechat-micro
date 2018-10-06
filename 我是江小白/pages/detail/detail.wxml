@@ -139,7 +139,9 @@
     </view>
     <view class='fixed' hidden='{{fixed}}'>
       <view class='back'>
-        <image class='image2' src='/image/location.png'></image>
+        <navigator url="/pages/choice/choice" open-type="navigateBack">
+          <image class='image2' src='/image/location.png'></image>
+        </navigator>
       </view>
       <view class='other'>
         <view class='publish otherItem'>

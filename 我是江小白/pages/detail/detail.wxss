@@ -267,6 +267,7 @@
   background-color: gainsboro;
   border-bottom-right-radius: 5rpx;
   border-bottom-left-radius: 5rpx;
+  height: 100rpx;
 }
 
 .enroll2 {
@@ -301,14 +302,14 @@
   z-index: 1000;
   display: flex;
   flex-flow: column nowrap;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom-right-radius: 5rpx;
   border-bottom-left-radius: 5rpx;
 }
 
 .chooseTitle {
   text-align: center;
-   font-size: 11pt;
+  font-size: 11pt;
 }
 
 .cancel {
@@ -358,11 +359,13 @@
   margin-left: 20rpx;
   color: grey;
 }
-.total{
+
+.total {
   display: inline-block;
   border-top: 1rpx solid gainsboro;
   width: 50%;
 }
+
 .totalPrice {
   color: orange;
   margin-left: 10rpx;
@@ -375,27 +378,33 @@
   text-align: center;
   background-color: #009ae8;
 }
-.padding3{
+
+.padding3 {
   padding-top: 18rpx;
   padding-bottom: 18rpx;
 }
-.operation2{
+
+.operation2 {
   padding: 20rpx 5rpx;
 }
-.countTotal{
+
+.countTotal {
   margin-left: 28rpx;
 }
-.mask{
-  width:100%;
-  height:100%;
-  position:fixed;
-  background-color:rgb(100, 90, 90);
-  z-index:999;
-  top:0;
-  left:0;
-  opacity:0.8;
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(100, 90, 90);
+  z-index: 999;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
 }
+
 /* 第一个下一步 */
+
 .next1 {
   width: 100%;
   font-size: 11pt;
@@ -404,23 +413,28 @@
   z-index: 1000;
   display: flex;
   flex-flow: column nowrap;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom-right-radius: 5rpx;
   border-bottom-left-radius: 5rpx;
 }
-.nextTitle{
-  text-align: center
+
+.nextTitle {
+  text-align: center;
 }
-.fanhui{
-  float: left
+
+.fanhui {
+  float: left;
 }
-.nextCancel{
-  float: right
+
+.nextCancel {
+  float: right;
 }
-.padding5{
+
+.padding5 {
   padding: 15rpx 20rpx;
 }
-.input{
+
+.input {
   border: 1rpx solid gainsboro;
   border-radius: 5rpx;
   padding: 5rpx;

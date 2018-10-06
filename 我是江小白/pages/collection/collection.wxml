@@ -7,6 +7,7 @@
     <view class='noOrderText'>没有收藏记录</view>
   </view>
   <view class='hasOrder'>
+    <view class='scrollItemHr'></view>
     <scroll-view class="scrollContentView" style="height:{{scrollHeight}}" scroll-y="{{scrollY}}" bindscrolltoupper="toTop" bindscrolltolower="toBottom" bindscroll="scroll" scroll-with-animation="true" scroll-top="{{scrollTop}}">
       <block wx:for="{{content}}" wx:key="{{item.id}}">
         <navigator url="/pages/detail/detail?id={{item.id}}">
